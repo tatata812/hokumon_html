@@ -23,22 +23,22 @@
 }
 
 body {
-  font-family: "游明朝", YuMincho, "Hiragino Mincho ProN W3", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+  font-family: 'Optima', 'Segoe UI', "游明朝", YuMincho, "Hiragino Mincho ProN W3", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
   line-height: 1.5;
 
 }
 
 p {
-  font-size: clamp(0.875rem, 0.83rem + 0.23vw, 1rem);
+  font-size: clamp(0.938rem, 0.983rem + -0.23vw, 0.813rem);
   color: #080808;
 
 }
 
 a {
-  font-size: clamp(0.875rem, 0.83rem + 0.23vw, 1rem);
+  font-size: clamp(0.938rem, 0.983rem + -0.23vw, 0.813rem);
   color: #080808;
 
-  
+
 
   &:hover {
     cursor: pointer;
@@ -61,7 +61,7 @@ ul,
 ol,
 li {
   list-style: none;
-  font-size: clamp(0.875rem, 0.83rem + 0.23vw, 1rem);
+  font-size: clamp(0.938rem, 0.983rem + -0.23vw, 0.813rem);
 }
 
 .pc-block {
@@ -83,22 +83,46 @@ li {
 
 .main {
 
-  padding: 130px 0 0 0;
+  padding: 100px 0 0 0;
 
-  @include tab {
-    padding: 84px 0 0 0;
+  @include pc {
+    padding: 58px 0 0 0;
   }
- 
+
   &__section-inner {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 0 12px;
+    padding: 80px 12px;
+
+    @include sp {
+      padding: 40px 12px;
+    }
   }
+
+  &__section-ttl {
+    max-width: 400px;
+    margin: 0 auto 24px;
+  }
+
+  &__section-link-wrap {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: right;
+  }
+
+  &__section-link {
+    display: inline-block;
+    width: 120px;
+  }
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
 }
 
-.bk {
-  background-color: #a7d6ff;
-}
+.section-ttl {}
 
 
 // エディター設定

@@ -33,35 +33,49 @@ header
 
 .header {
   background-color: #fff;
-  height: 110px;
   position: fixed;
 
-  @include pc {
+
+
+  @include tab {
     border-bottom: 1px #8a8a8a solid;
-    height: 67px;
 
   }
 
   &__inner {
-    padding: 8px;
+    padding: 16px 8px 16px 60px;
+    max-width: 1600px;
+    margin: 0 auto;
+
+    @media screen and (max-width: 1350px) {
+      padding: 16px 8px 16px;
+    }
 
     @include pc {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 8px;
-      margin: 0 0 0;
+    }
+
+
+    @include sp {
+      padding: 4px 8px;
     }
   }
 
   &__ttl {
-    max-width: 260px;
+    max-width: 320px;
+
+    @media screen and (max-width: 1550px) {
+      width: 260px;
+    }
 
     @media screen and (max-width: 1250px) {
       width: 220px;
     }
 
-    @include pc {
+    @include tab {
       max-width: 120px;
 
     }
@@ -70,15 +84,21 @@ header
   &__nav-list {
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 55%;
     transform: translate(-50%, -50%);
     max-width: 900px;
     margin: 0 0 0 auto;
     display: flex;
     align-items: center;
 
-
     @include pc {
+      position: initial;
+      transform: translate(0, 0);
+
+    }
+
+
+    @include tab {
       display: none;
     }
 
@@ -97,6 +117,10 @@ header
       width: 108px;
     }
 
+    @include pc {
+      width: 88px;
+    }
+
     &:hover {
       background-color: #c5c5c5;
       cursor: pointer;
@@ -108,6 +132,9 @@ header
   &__nav-link {
     position: relative;
     display: block;
+    font-size: 13px;
+    letter-spacing: 0.5em;
+    padding: 2px 0 2px 0.5em;
 
     &:hover {
       text-decoration: none;
@@ -124,7 +151,7 @@ header
     border-radius: 5px;
     display: none;
 
-    @include pc {
+    @include tab {
       display: block;
     }
 
@@ -241,9 +268,8 @@ footer
   &__scroll-btn {
     cursor: pointer;
     position: absolute;
-    top: -120px;
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: 0;
+    right: 16px;
   }
 }
 
@@ -275,19 +301,287 @@ main-visual
 
 .main-visual {
 
+  position: relative;
+
   &__list {
 
+    background-color: #000;
+  }
+
+  &__item {}
+
+
+  &__item-img {}
+
+  &__tel-wrap {
+    position: absolute;
+    top: 40px;
+    left: 87%;
+    transform: translateX(-50%);
+  }
+
+  &__repeat-wrap {
+    position: absolute;
+    top: 75%;
+    left: 87%;
+    transform: translateX(-50%);
+
+    @include pc {
+      display: none;
+    }
+  }
+
+  &__ {}
+
+
+
+  .slick-dots {
+    bottom: 8px;
+  }
+
+  .slick-slider {
+    margin-bottom: 0;
+  }
+
+  .slick-prev {
+    left: 30px;
+    z-index: 2;
+  }
+
+  .slick-next {
+    right: 30px;
+  }
+
+  .slick-prev:before {
+    background: url(../img/top/main-visual-arrow_l.png) !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    font-size: 36px;
+  }
+
+  .slick-next:before {
+    background: url(../img/top/main-visual-arrow_r.png) !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    font-size: 36px;
+
+  }
+
+  .slick-dots li.slick-active button:before {
+    opacity: .75;
+    color: #1b1464;
+}
+
+}
+
+// スライド　タイトル・リード文
+.main-visual-item {
+  position: relative;
+
+
+  &__text-wrap {
+    position: absolute;
+    background-color: rgba(27, 27, 27, 0.5);
+    bottom: 40px;
+    left: 40px;
+    z-index: 2;
+    padding: 24px 16px;
+
+    @include pc {
+      padding: 12px;
+      bottom: 16px;
+      left: 16px;
+
+    }
+
+  }
+
+  &__ttl {
+    color: #fff;
+    margin: 0 0 12px;
+
+    @include pc {
+      margin: 0;
+    }
+
+  }
+
+  &__lead {
+    color: #fff;
+    font-size: 14px;
+
+    @include pc {
+      display: none;
+    }
+  }
+
+}
+
+// 連絡先
+.top-tel-wrap {
+  background-color: rgba(27, 27, 27, 0.5);
+  padding: 24px 16px;
+
+  @include pc {
+    display: none;
+  }
+
+
+
+  &__address {
+    color: #fff;
+    margin: 0 0 8px;
+  }
+
+  &__tel {
+    color: #fff;
+    display: inline-block;
+    font-size: 40px;
+    line-height: 32px;
+    margin: 0 0 8px;
+    white-space: nowrap;
+
+  }
+
+  &__tel-span {
+    color: #fff;
+    display: block;
+    font-size: 14px;
+    line-height: 14px;
+    margin: 0 0 2px;
+
+  }
+
+  &__time {
+    color: #fff;
+  }
+
+
+}
+
+// リピーター
+.top-repeat-wrap {
+  background-color: #960000;
+  padding: 24px 16px;
+
+  @include pc {
+    padding: 12px 8px;
+    background-color: #000;
+    box-shadow: 0 0 0 100vmax #000;
+    clip-path: inset(0 -100vmax);
+
+  }
+
+
+  &__text {
+    color: #fff;
+    white-space: nowrap;
+    font-size: 18px;
+
+    @include pc {
+      font-size: 14px;
+    }
+  }
+}
+
+
+
+/* =================================
+top-489
+ ================================= */
+
+.top-489 {
+  padding: 0 8px 40px 8px;
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__repeat-wrap {
+    display: inline-block;
+    text-align: center;
+    display: none;
+
+    @include pc {
+      display: block;
+    }
+  }
+
+
+}
+
+#search_489ban {
+
+  form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .date_489ban dt {
+    display: inline-block;
+  }
+
+  .date_489ban dd {
+    display: inline-block;
+  }
+
+  .button {
+    display: inline-block;
+
+  }
+}
+
+/* =================================
+top-info
+ ================================= */
+
+.top-info {
+  background-color: #ebf8f7;
+
+  &__ttl-wrap {
+    margin: 0 0 40px;
+  }
+
+  &__list {
+
+    .slick-dots li.slick-active button:before {
+      color: #1b1464;
+  }
   }
 
   &__item {
-    width: 100%;
-    height: 60%;
-    max-height: 720px;
-    object-fit: cover;
+    margin: 0 12px;
   }
 
-,,,,,,,,mmnmn,,,  }
-
   &__ {}
 
   &__ {}
@@ -306,103 +600,40 @@ main-visual
 
   &__ {}
 
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
 
 
 }
 
-/* =================================
+.top-info-article {
 
- ================================= */
+  width: 300px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  background-color: #fff;
 
-.aaa {
+  &__img {
+    overflow: hidden;
 
-  &__ {}
+  }
 
-  &__ {}
+  &__text-wrap {
+    height: 120px;
+    background-color: #fff;
+    padding: 12px;
+  }
 
-  &__ {}
+  &__ttl {
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0 0 12px;
+  }
 
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
+  &__btn {
+    display: block;
+    width: 100px;
+    margin-left: auto;
+  }
 
   &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-
-}
-
-/* =================================
-
- ================================= */
-
-.aaa {
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-
 }
 
 /* =================================

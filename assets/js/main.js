@@ -24,27 +24,47 @@ $(function () {
     return false; //親要素へのイベント伝播を止める
   });
 
-  // トップページスクロールでヘッダーロゴ出現
 
-  $(window).scroll(function () {
-    if ($(window).scrollTop() > 200) {
-      $('.header-ttl-js').addClass('active');
-    } else {
-      $('.header-ttl-js').removeClass('active');
-    }
-  });
 
   $(".main-visual-js").slick({
     autoplay: true,
     autoplaySpeed: 4000,
-    fade: true, // スライドをフェードイン・フェードアウト
     cssEase: 'linear', // アニメーション
     speed: 1000, // フェードアニメーションの速度設定
     dots: true,
-    arrows: false,
-    slidesToShow: 1,
+    arrows: true,
+    adaptiveHeight:true,
+  });
 
+  $(".top-info-js").slick({
+    autoplay: false,
+    dots: true,
+    arrows: true,
+    slidesToShow: 4,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+          arrows: false,
 
+        }
+      },
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 2,
+          arrows: false,
+        }
+      },
+      {
+        breakpoint: 560,
+        settings: {
+          slidesToShow: 1,
+          arrows: false,
+        }
+      },
+    ],
   });
 
   // お知らせタブ
