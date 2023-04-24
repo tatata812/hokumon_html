@@ -1,0 +1,766 @@
+@use "config";
+@use "reserve";
+
+@mixin sp {
+  @media (max-width:(600px)) {
+    @content;
+  }
+}
+
+@mixin tab {
+  @media (max-width:(820px)) {
+    @content;
+  }
+}
+
+@mixin pc {
+  @media (max-width:(1120px)) {
+    @content;
+  }
+}
+
+
+/* =================================
+header
+ ================================= */
+
+.wrap-header {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  width: 100%;
+}
+
+.header {
+  background-color: #fff;
+
+  @include tab {
+    border-bottom: 1px #8a8a8a solid;
+    border-top: 10px solid #297ed0;
+  }
+
+  &__inner {
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    padding: 16px;
+    margin: 0 0 16px;
+
+    @include tab {
+      padding: 8px;
+      margin: 0 0 0;
+    }
+  }
+
+  &__ttl {
+    display: none;
+    display: block;
+    max-width: 220px;
+  }
+
+  &__nav-list {
+    max-width: 900px;
+    margin: 0 0 0 auto;
+    display: flex;
+    align-items: center;
+
+
+    @include pc {
+      display: none;
+    }
+
+  }
+
+  &__nav-item {
+    margin: 0 0 0 24px;
+
+    @media screen and (max-width: 1150px) {
+      margin: 0 0 0 12px;
+    }
+  }
+
+  &__nav-link {
+    padding-bottom: 14px;
+    font-size: 18px;
+    position: relative;
+
+    &:hover {
+      opacity: 1;
+      text-decoration: none;
+
+      &::before {
+        content: url(../img/top/header-active.png);
+        transform: scale(0.7);
+        position: absolute;
+        top: 18px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    &--active {
+      position: relative;
+
+      &::before {
+        content: url(../img/top/header-active.png);
+        transform: scale(0.7);
+        position: absolute;
+        top: 18px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+
+  &__open-btn {
+    position: relative;
+    z-index: 999;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    display: none;
+
+    @include pc {
+      display: block;
+    }
+
+    span {
+      display: inline-block;
+      transition: all 0.4s;
+      /*アニメーションの設定*/
+      position: absolute;
+      left: 11px;
+      height: 2px;
+      border-radius: 5px;
+      background: #000;
+      width: 65%;
+
+      &:nth-of-type(1) {
+        top: 13px;
+      }
+
+      &:nth-of-type(2) {
+        top: 23px;
+      }
+
+      &:nth-of-type(3) {
+        top: 33px;
+      }
+
+    }
+
+    /*.active が付与された時の挙動*/
+    &.active span:nth-of-type(1) {
+      top: 14px;
+      left: 18px;
+      transform: translateY(6px) rotate(-45deg);
+      width: 60%;
+    }
+
+    &.active.active span:nth-of-type(2) {
+      opacity: 0;
+    }
+
+    &.active span:nth-of-type(3) {
+      top: 26px;
+      left: 18px;
+      transform: translateY(-6px) rotate(45deg);
+      width: 60%;
+    }
+
+    &.active span:nth-of-type(3)::after {
+      display: none;
+    }
+  }
+}
+
+
+
+.header-sp {
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  right: -120%;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(250, 250, 250, 0.9);
+  transition: all 0.6s;
+
+  &.open-menu {
+    right: 0;
+  }
+
+  &__inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+
+  &__time {
+    text-align: center;
+    margin: 0 0 40px;
+  }
+
+  &__nav-list {
+    margin: 0 0 40px;
+  }
+
+  &__nav-item {
+    margin: 0 0 24px;
+  }
+}
+
+
+/* =================================
+footer
+ ================================= */
+
+.footer {
+  position: relative;
+  background-color: #37a870;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+
+
+  &__inner {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 40px 12px 24px;
+
+  }
+
+
+  // スクロールボタン
+  &__scroll-btn {
+    cursor: pointer;
+    position: absolute;
+    top: -120px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+
+/* =================================
+top
+ ================================= */
+
+.page-top {
+
+  height: 800px;
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+
+}
+
+/* =================================
+
+ ================================= */
+
+.aaa {
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+
+}
+
+/* =================================
+
+ ================================= */
+
+.aaa {
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+
+}
+
+/* =================================
+
+ ================================= */
+
+.aaa {
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+
+}
+
+/* =================================
+
+ ================================= */
+
+.aaa {
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+
+}
+
+/* =================================
+
+ ================================= */
+
+.aaa {
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+
+}
+
+/* =================================
+
+ ================================= */
+
+.aaa {
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+
+}
+
+/* =================================
+
+ ================================= */
+
+.aaa {
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+
+}
+
+/* =================================
+
+ ================================= */
+
+.aaa {
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+
+}
+
+/* =================================
+
+ ================================= */
+
+.aaa {
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+
+}
+
+/* =================================
+
+ ================================= */
+
+.aaa {
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+
+}
+
+/* =================================
+
+ ================================= */
+
+.aaa {
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+
+}

@@ -1,0 +1,170 @@
+@mixin sp {
+  @media (max-width:(600px)) {
+    @content;
+  }
+}
+
+@mixin tab {
+  @media (max-width:(820px)) {
+    @content;
+  }
+}
+
+@mixin pc {
+  @media (max-width:(1120px)) {
+    @content;
+  }
+}
+
+
+* {
+  word-break: break-word;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+  color: #666;
+  line-height: 1.5;
+
+}
+
+p {
+  font-size: clamp(0.875rem, 0.83rem + 0.23vw, 1rem);
+}
+
+a {
+  font-size: clamp(0.875rem, 0.83rem + 0.23vw, 1rem);
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+
+a:hover {
+  text-decoration: underline;
+  opacity: 0.5;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+  font-size: clamp(0.875rem, 0.83rem + 0.23vw, 1rem);
+}
+
+.pc-block {
+  display: block;
+
+  @include tab {
+    display: none;
+  }
+}
+
+.sp-block {
+  display: none;
+
+  @include tab {
+    display: block;
+  }
+}
+
+
+.main {
+
+  padding: 130px 0 0 0;
+
+  @include tab {
+    padding: 84px 0 0 0;
+  }
+ 
+  &__section-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 12px;
+  }
+}
+
+.bk {
+  background-color: #a7d6ff;
+}
+
+
+// エディター設定
+
+.page-style {
+  &__block {
+    margin: 0 0 60px;
+  }
+
+  .aligncenter {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .alignright {
+    display: block;
+    margin-left: auto;
+  }
+
+  p {
+    margin: 0 0 12px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  h1 {
+    font-size: 28px;
+    margin: 24px 0 32px;
+    background: linear-gradient(transparent 70%, #a7d6ff 70%);
+
+  }
+
+  h2 {
+    font-size: 24px;
+    margin: 24px 0 20px;
+    color: #002e73;
+    font-weight: bold;
+  }
+
+  h3 {
+    font-size: 20px;
+    margin: 24px 0 16px;
+
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  ol {
+    margin: 0 0 12px 24px;
+    line-height: 24px;
+
+    li {
+      font-size: 18px;
+      list-style: decimal;
+    }
+  }
+
+  ul {
+    margin: 0 0 12px 24px;
+    line-height: 24px;
+
+    li {
+      font-size: 18px;
+      list-style: disc;
+    }
+  }
+
+  li {
+    font-size: 18px;
+  }
+}

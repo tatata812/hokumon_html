@@ -1,0 +1,165 @@
+<!-- <?php
+  $des="サイト説明文が入ります。サイト説明文が入ります。サイト説明文が入ります。サイト説明文が入ります。サイト説明文が入ります。"
+  ; ?> -->
+<!DOCTYPE html>
+<html lang="ja" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="email=no,telephone=no,address=no">
+  <!--!!!!!!!!!!!!!!!!!WPでは不要!!!!!!!!!!!!!!!!!!!!!-->
+  <title>お知らせ詳細ページ</title>
+  <meta name="description" content="<?php echo $des; ?>">
+  <!--!!!!!!!!!!!!!!!!!公開時、allに変更する!!!!!!!!!!!!!!!!!!!!!-->
+  <meta name="robots" content="none">
+  <meta property="og:type" content="website">
+  <meta property="og:title"
+    content="<?php wp_title( '-', true, 'right' ); ?><?php bloginfo( 'name' ); ?> | <?php echo $des; ?>">
+  <meta property="og:description" content="<?php echo $des; ?>">
+  <meta property="og:site_name"
+    content="<?php wp_title( '-', true, 'right' ); ?><?php bloginfo( 'name' ); ?> | <?php echo $des; ?>">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/assets/img/fb.jpg">
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title"
+    content="<?php wp_title( '-', true, 'right' ); ?><?php bloginfo( 'name' ); ?> | <?php echo $des; ?>">
+  <meta name="twitter:description" content="<?php echo $des; ?>">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+  <link rel="stylesheet" href="assets/css/html5reset-1.6.1.css">
+  <link rel="stylesheet" href="assets/css/style.css?20230220">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+
+<body class="wrap">
+
+  <header class="header wrap-header">
+    <div class="header__inner">
+      <h1 class="header__ttl"><a href="index.html"><img src="assets/img/top/header-logo.png" alt="有限会社エーシー山崎"></a>
+      </h1>
+      <nav>
+        <ul class="header__nav">
+          <li class="header__nav-item"><a href="#" class="header__nav-link header__nav-link--active">お知らせ</a>
+          </li>
+          <li class="header__nav-item"><a href="#" class="header__nav-link">キャンプ場のご案内</a></li>
+          <li class="header__nav-item"><a href="#" class="header__nav-link">シーカヤック体験</a></li>
+          <li class="header__nav-item"><a href="#" class="header__nav-link">Q＆A</a></li>
+          <li class="header__nav-item"><a href="#" class="header__nav-link">お問い合わせ</a></li>
+          <li class="header__nav-item"><a href="#" class="header__nav-link header__recruit-link"><img
+                src="assets/img/top/header-btn.png" alt="ご予約"></a></li>
+        </ul>
+      </nav>
+      <div class="header__open-btn">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+
+    <div class="header-sp">
+      <div class="header-sp__inner">
+        <nav>
+          <ul class="header-sp__nav">
+            <li class="header-sp__nav-item"><a href="#" class="header-sp__nav-link">お知らせ</a></li>
+            <li class="header-sp__nav-item"><a href="#" class="header-sp__nav-link">キャンプ場のご案内</a></li>
+            <li class="header-sp__nav-item"><a href="#" class="header-sp__nav-link">シーカヤック体験</a></li>
+            <li class="header-sp__nav-item"><a href="#" class="header-sp__nav-link">Q＆A</a></li>
+            <li class="header-sp__nav-item"><a href="#" class="header-sp__nav-link">お問い合わせ</a></li>
+            <li class="header-sp__nav-item"><a href="#" class="header-sp__nav-link">ご予約</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <div class="main single">
+    <div class="single__page-ttl-wrap">
+      <h1 class="single__page-ttl">
+        <img src="assets/img/lower/single-ttl.png" alt="Reserve">
+      </h1>
+    </div>
+    <div class="main__breadcrumb">ホーム　＞　〇〇〇〇</div>
+
+    <section class="single__section single-section">
+
+      <div class="single-section__content">
+        <h1 class="single-section__ttl">チェックイン　チェックアウトの時間変更について</h1>
+        <date class="single-section__date">2023.01.01</date>
+        <div class="single-section__content-inner page-style">
+          <h1>H1タイトルタイトル</h1>
+          <h2>H2タイトルタイトル</h2>
+          <h3>H3タイトルタイトル</h3>
+          <p>文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。</p>
+          <p>文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。</p>
+          <p>文章が文章が入ります。文章が入ります。文章が入ります。入ります。文章が入ります。文章が入ります。</p>
+          <ol>
+            <li>リストリストリストリストリストリストリストリスト</li>
+            <li>リスト</li>
+            <li>リスト</li>
+          </ol>
+          <ul>
+            <li>リスト</li>
+            <li>リスト</li>
+            <li>リスト</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!--main end-->
+
+
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <a href="#" target="_blank" class="footer__logo">
+        <img src="assets/img/top/footer-logo.png">
+      </a>
+      <div class="footer__content">
+        <div class="footer__item footer__item01">
+          伊上海浜公園オートキャンプ場<br>
+          〒759-4505 <br>
+          山口県長門市油谷伊上 2403-8 <br>
+          【TEL】<a href="tel:0837-33-3000" class="footer__item01-link">0837-33-3000</a><br>
+          【事務所営業時間】9:00 ～ 17:00
+        </div>
+        <div class="footer__item footer__item02">
+          <a href="#" class="footer__item02-icon" target="_blank"><img src="assets/img/top/footer-fb.png">
+          </a>
+          <a href="#" class="footer__item02-icon" target="_blank"><img src="assets/img/top/footer-insta.png">
+          </a>
+          <a href="#" class="footer__item02-icon" target="_blank"><img src="assets/img/top/footer-youtube.png">
+          </a>
+        </div>
+        <div class="footer__item footer__list footer__item03">
+          <a href="#" class="footer__list-item">▶ キャンプ場のご案内</a>
+          <a href="#" class="footer__list-item">▶ オートキャンプ</a>
+          <a href="#" class="footer__list-item">▶ デイキャンプ</a>
+          <a href="#" class="footer__list-item">▶ レンタル売店</a>
+          <a href="#" class="footer__list-item">▶ 地元食材BBQセット</a>
+        </div>
+        <div class="footer__item footer__list footer__item03">
+          <a href="#" class="footer__list-item">▶ シーカヤック体験</a>
+          <a href="#" class="footer__list-item">▶ ダイビング体験</a>
+          <a href="#" class="footer__list-item">▶ お知らせ</a>
+          <a href="#" class="footer__list-item">▶ ご予約について</a>
+          <a href="#" class="footer__list-item">▶ プライバシーポリシー</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        Copyright © IGAMI SEASIDE-PARK AUTO CAMP. All Rights Reserved.
+      </div>
+    </div>
+    <div class="footer__scroll-btn"><img src="assets/img/top/scroll-btn.png" alt="TOPへ"></div>
+  </footer>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="assets/js/main.js">
+  </script>
+</body>
+
+</html>
