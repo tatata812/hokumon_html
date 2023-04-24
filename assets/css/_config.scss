@@ -23,18 +23,22 @@
 }
 
 body {
-  font-family: "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
-  color: #666;
+  font-family: "游明朝", YuMincho, "Hiragino Mincho ProN W3", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
   line-height: 1.5;
 
 }
 
 p {
   font-size: clamp(0.875rem, 0.83rem + 0.23vw, 1rem);
+  color: #080808;
+
 }
 
 a {
   font-size: clamp(0.875rem, 0.83rem + 0.23vw, 1rem);
+  color: #080808;
+
+  
 
   &:hover {
     cursor: pointer;

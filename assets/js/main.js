@@ -34,7 +34,7 @@ $(function () {
     }
   });
 
-  $(".top-slider-js").slick({
+  $(".main-visual-js").slick({
     autoplay: true,
     autoplaySpeed: 4000,
     fade: true, // スライドをフェードイン・フェードアウト
@@ -43,7 +43,7 @@ $(function () {
     dots: true,
     arrows: false,
     slidesToShow: 1,
-    dotsClass: "main-visual__slider-dots",
+
 
   });
 
