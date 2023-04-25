@@ -26,9 +26,12 @@ $(function () {
 
 
 
+
+
   $(".main-visual-js").slick({
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 4000,
+    fade: true,
     cssEase: 'linear', // アニメーション
     speed: 1000, // フェードアニメーションの速度設定
     dots: true,
@@ -58,7 +61,7 @@ $(function () {
         }
       },
       {
-        breakpoint: 560,
+        breakpoint: 600,
         settings: {
           slidesToShow: 1,
           arrows: false,
@@ -67,14 +70,30 @@ $(function () {
     ],
   });
 
-  // お知らせタブ
-  // $(".information-section__tab-item").on("click", function () {
-  //   var i = $(this).index();
-  //   $(".information-section__tab-item").removeClass("active");
-  //   $(".information-section__box-item").removeClass("active");
-  //   $(".information-section__tab-item").eq(i).addClass("active");
-  //   $(".information-section__box-item").eq(i).addClass("active");
-  // });
+  function checkBreakPoint() {
+    w = $(window).width();
+    if (w <= 600) {
+      // スマホ向け（767px以下のとき）
+      $('.top-plan-js').not('.slick-initialized').slick({
+        //スライドさせる
+        autoplay: false,
+        dots: true,
+        arrows: false,
+        slidesToShow: 1,
+      });
+    } else {
+      // PC向け
+      $('.top-plan-js.slick-initialized').slick('unslick');
+    }
+  }
+  // ウインドウがリサイズする度にチェック
+  $(window).resize(function(){
+    checkBreakPoint();
+  });
+  // 初回チェック
+  checkBreakPoint();
+
+
 
 
 })

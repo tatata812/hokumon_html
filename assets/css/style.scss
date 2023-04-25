@@ -352,26 +352,6 @@ main-visual
     right: 30px;
   }
 
-  .slick-prev:before {
-    background: url(../img/top/main-visual-arrow_l.png) !important;
-    background-size: contain !important;
-    background-repeat: no-repeat !important;
-    font-size: 36px;
-  }
-
-  .slick-next:before {
-    background: url(../img/top/main-visual-arrow_r.png) !important;
-    background-size: contain !important;
-    background-repeat: no-repeat !important;
-    font-size: 36px;
-
-  }
-
-  .slick-dots li.slick-active button:before {
-    opacity: .75;
-    color: #1b1464;
-}
-
 }
 
 // スライド　タイトル・リード文
@@ -568,14 +548,17 @@ top-info
   background-color: #ebf8f7;
 
   &__ttl-wrap {
-    margin: 0 0 40px;
+    margin: 0 0 60px;
+
+    @include sp {
+      margin: 0 0 40px;
+    }
   }
 
   &__list {
-
-    .slick-dots li.slick-active button:before {
-      color: #1b1464;
-  }
+    .slick-dots {
+      bottom: -40px;
+    }
   }
 
   &__item {
@@ -604,45 +587,181 @@ top-info
 
 }
 
-.top-info-article {
 
-  width: 300px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-  background-color: #fff;
 
-  &__img {
-    overflow: hidden;
+/* =================================
+top-holiday
+ ================================= */
 
-  }
+.top-holiday {
 
-  &__text-wrap {
-    height: 120px;
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+
+}
+
+/* =================================
+top-room
+ ================================= */
+
+.top-room {
+  background-color: #ebf8f7;
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+
+}
+
+/* =================================
+top-meal
+ ================================= */
+
+.top-meal {
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+
+}
+
+/* =================================
+top-plan
+ ================================= */
+
+.top-plan {
+  background-color: #ebf8f7;
+
+  &--purpose {
     background-color: #fff;
-    padding: 12px;
   }
 
-  &__ttl {
-    font-size: 13px;
-    font-weight: normal;
-    margin: 0 0 12px;
+  &__ttl-wrap {
+    margin: 0 0 60px;
+
+    @include sp {
+      margin: 0 0 40px;
+    }
   }
 
-  &__btn {
-    display: block;
-    width: 100px;
-    margin-left: auto;
+  &__list {
+    display: flex;
+    justify-content: space-around;
+    gap: 16px;
+
+    @include tab {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+   
+    width: 25%;
+   
+    @include tab{
+      width: 48%;
+    }
+
+    @include sp{
+      width: 98%;
+    }
   }
 
   &__ {}
-}
-
-/* =================================
-
- ================================= */
-
-.aaa {
-
-  &__ {}
 
   &__ {}
 
@@ -680,10 +799,10 @@ top-info
 }
 
 /* =================================
-
+top-purpose
  ================================= */
 
-.aaa {
+.top-purpose {
 
   &__ {}
 
@@ -723,10 +842,12 @@ top-info
 }
 
 /* =================================
-
+top-link
  ================================= */
 
-.aaa {
+.top-link {
+
+  background-color: #ebf8f7;
 
   &__ {}
 
@@ -766,96 +887,10 @@ top-info
 }
 
 /* =================================
-
+top-photograph
  ================================= */
 
-.aaa {
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-
-}
-
-/* =================================
-
- ================================= */
-
-.aaa {
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-
-}
-
-/* =================================
-
- ================================= */
-
-.aaa {
+.top-photograph {
 
   &__ {}
 
