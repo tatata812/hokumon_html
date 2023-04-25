@@ -95,7 +95,7 @@ li {
     padding: 80px 12px;
 
     @include sp {
-      padding: 40px 12px;
+      padding: 40px 20px;
     }
   }
 
@@ -181,17 +181,16 @@ li {
     min-height: 136px;
     background-color: #fff;
     padding: 12px;
-    border: 1px solid #eee;
   }
 
   &__ttl {
     font-size: 13px;
-    font-weight: normal;
+    font-weight: 100;
     margin: 0 0 12px;
 
     &--plan {
       font-size: 15px;
-
+      font-weight: 700;
     }
   }
 
