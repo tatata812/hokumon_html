@@ -175,6 +175,7 @@ li {
   &__img {
     overflow: hidden;
 
+    
   }
 
   &__text-wrap {
@@ -191,6 +192,13 @@ li {
     &--plan {
       font-size: 15px;
       font-weight: 700;
+    }
+
+    &--meal {
+      border-bottom: 1px solid #1b1464;
+      font-size: 15px;
+      font-weight: 700;
+
     }
   }
 

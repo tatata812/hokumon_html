@@ -37,6 +37,14 @@ $(function () {
     dots: true,
     arrows: true,
     adaptiveHeight:true,
+    responsive: [
+      {
+        breakpoint: 600,
+        settings: {
+          arrows: false,
+        }
+      },
+    ],
   });
 
   $(".top-info-js").slick({
@@ -46,7 +54,7 @@ $(function () {
     slidesToShow: 4,
     responsive: [
       {
-        breakpoint: 1200,
+        breakpoint: 1400,
         settings: {
           slidesToShow: 3,
           arrows: false,

@@ -249,27 +249,151 @@ footer
  ================================= */
 
 .footer {
-  position: relative;
-  background-color: #37a870;
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: #fff;
+  background-color: #ebf8f7;
+  padding: 40px 8px 0;
 
 
-  &__inner {
-    max-width: 1080px;
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 40px 12px 24px;
+    position: relative;
+
+
+    @include tab{
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin: 0 0 32px;
+    }
+  }
+
+  &__ttl {
+    max-width: 300px;
+    @include tab{
+    margin: 0 0 24px;
+    }
+  }
+
+  &__logo {
+    display: block;
+    margin: 0 0 24px;
+  }
+
+  &__tel {
+    margin: 0 0 0 32px;
+    display: block;
+  }
+
+  &__tel-span {
+    font-size: 12px;
+  }
+
+  &__address {
+    font-size: 12px;
+    margin: 0 0 0 32px;
+    display: block;
+
 
   }
+
+  &__menu {
+    display: flex;
+    gap: 12px;
+
+    @include pc {
+      flex-direction: column;
+    }
+  }
+
+  &__menu-item {
+    background-color: #fff;
+    text-align: center;
+    width: 150px;
+    padding: 2px;
+    border: #8a8a8a 1px solid;
+
+  }
+
+  &__sns {
+    display: flex;
+    gap: 12px;
+    border-top: #1b1464 solid 1px;
+    border-bottom: #1b1464 solid 1px;
+    padding: 6px 48px 0;
+
+    @include tab{
+      padding: 6px 24px 0;
+    }
+
+  }
+
+  &__sns-item {
+    width: 18px;
+  }
+
+  &__nev {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 32px;
+
+    @include pc {
+      margin: 12px 0 32px;
+    }
+
+    @include tab{
+      flex-wrap: wrap;
+    }
+  }
+
+  &__nav-item {
+    border-left: 1px solid #333;
+    padding: 0 16px;
+    line-height: 18px;
+
+    @include pc {
+      padding: 0 8px;
+    }
+
+    @include tab{
+    margin: 0 0 6px;
+    }
+
+    &:last-child {
+      border-right: 1px solid #333;
+    }
+  }
+
+  &__bottom {
+    border-top: 1px solid #777777;
+    padding: 12px 0;
+
+  }
+
+  &__coppy {
+    text-align: center;
+    font-size: 12px;
+  }
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
 
 
   // スクロールボタン
   &__scroll-btn {
     cursor: pointer;
     position: absolute;
-    bottom: 0;
+    top: -62px;
     right: 16px;
+    width: 40px;
   }
 }
 
@@ -400,13 +524,13 @@ main-visual
 // 連絡先
 .top-tel-wrap {
   background-color: rgba(27, 27, 27, 0.5);
-  padding: 24px 16px;
+  padding: 16px;
+  border-radius: 3px;
+
 
   @include pc {
     display: none;
   }
-
-
 
   &__address {
     color: #fff;
@@ -442,21 +566,21 @@ main-visual
 // リピーター
 .top-repeat-wrap {
   background-color: #960000;
-  padding: 24px 16px;
+  padding: 14px;
+  border-radius: 3px;
 
   @include pc {
     padding: 12px 8px;
     background-color: #000;
     box-shadow: 0 0 0 100vmax #000;
     clip-path: inset(0 -100vmax);
-
   }
 
 
   &__text {
     color: #fff;
     white-space: nowrap;
-    font-size: 18px;
+    font-size: 17px;
 
     @include pc {
       font-size: 14px;
@@ -667,7 +791,13 @@ top-holiday
     left: 92%;
     transform: translateX(-50%);
 
+
+    @include pc {
+      left: 88%;
+    }
+
     @include tab {
+      left: 92%;
       width: 80px;
     }
   }
@@ -714,32 +844,30 @@ top-room
 
   &__top-box {
     margin: 0 0 16px;
+
+    @include sp {
+      margin: 0 0 12px;
+    }
   }
 
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
 
   &__bottom-box {
     display: flex;
     justify-content: space-between;
     gap: 16px;
+    flex-wrap: wrap;
 
+    @include sp {
+      gap: 12px;
 
-    flex-wrap:wrap;
-    
-
+    }
   }
 
   &__item {
-    width: 32.5%;
+    width: calc(33.3333% - 12px);
 
-    @include tab{
-      width: 47%;
+    @include pc {
+      width: calc(50% - 8px);
 
     }
   }
@@ -758,13 +886,21 @@ top-room
 .room-top-box {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   gap: 16px;
 
+
+  @include sp {
+    gap: 12px;
+
+  }
+
   &__item {
-    width: 49%;
+    width: calc(50% - 8px);
+
     position: relative;
 
-    @include tab{
+    @include tab {
       width: 100%;
     }
   }
@@ -779,7 +915,7 @@ top-room
 
   &__ttl {
     color: #fff;
-    text-shadow: 2px 2px 1px rgba(0,0,0,0.3);
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3);
     font-size: 18px;
     font-weight: 100;
     white-space: nowrap;
@@ -787,7 +923,7 @@ top-room
 
   &__lead {
     color: #fff;
-    text-shadow: 2px 2px 1px rgba(0,0,0,0.3);
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3);
 
   }
 
@@ -805,15 +941,67 @@ top-meal
 
   &__ttl-wrap {
     margin: 0 0 60px;
+    position: relative;
 
     @include sp {
       margin: 0 0 40px;
     }
   }
 
-  &__ {}
+  &__bg-img01 {
+    width: 120px;
+    position: absolute;
+    top: -47px;
+    left: 80%;
+    transform: translateX(-50%) scale(-1, 1);
 
-  &__ {}
+    @include pc {
+      left: 88%;
+      top: 0;
+      width: 60px;
+    }
+  }
+
+  &__bg-img02 {
+    width: 200px;
+    position: absolute;
+    top: -67px;
+    left: 9%;
+    transform: translateX(-50%) scale(-1, 1);
+
+    @include pc {
+      top: -21px;
+      width: 80px;
+    }
+  }
+
+
+  &__list {
+    display: flex;
+    justify-content: space-around;
+    gap: 16px;
+
+    @include tab {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    box-shadow: none;
+    width: 25%;
+
+    @include tab {
+      width: 48%;
+    }
+
+    @include sp {
+      width: 98%;
+    }
+  }
+
+  &__img {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
 
   &__ {}
 
@@ -982,35 +1170,55 @@ top-link
 
   &__ttl-wrap {
     margin: 0 0 60px;
+    position: relative;
 
     @include sp {
       margin: 0 0 40px;
     }
   }
 
-  &__ {}
+  &__item-wrap {
+    display: flex;
+    gap: 12px;
 
-  &__ {}
+    @include tab {
+      flex-wrap: wrap;
+    }
 
-  &__ {}
+  }
 
-  &__ {}
+  &__item {
+    display: block;
+    border: #1b1464 solid 1px;
+    background-color: #fff;
+    text-align: center;
 
-  &__ {}
+    @include tab {
+      width: 48%;
+    }
+  }
 
-  &__ {}
+  &__img {
+    margin: 0 0 12px 0;
+  }
 
-  &__ {}
+  &__ttl {
+    color: #1b1464;
+    font-size: 15px;
+    border-bottom: 1px solid #c5c5c5;
+    padding: 0 0 4px;
+    margin: 0 5% 12px;
+  }
 
-  &__ {}
+  &__ttl-span {
+    display: block;
+    font-size: 12px;
+  }
 
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
+  &__lead {
+    font-size: 12px;
+    margin: 0 0 12px;
+  }
 
   &__ {}
 
