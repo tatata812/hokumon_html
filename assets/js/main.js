@@ -15,7 +15,7 @@ $(function () {
     $("header__open-btn").removeClass("active"); //ボタンの activeクラスを除去し
   });
 
-  $(".footer__scroll-btn").click(function () {
+  $(".top-to-js").click(function () {
     $("body,html").animate({
         scrollTop: 0 //ページトップまでスクロール
       },
