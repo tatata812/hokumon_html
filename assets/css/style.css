@@ -872,6 +872,8 @@ top-489
   display: inline-block;
   text-align: center;
   display: none;
+  color: #1b1464;
+  padding: 16px 0 0 0;
 }
 @media (max-width: 1120px) {
   .top-489__repeat-wrap {

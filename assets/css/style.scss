@@ -702,17 +702,14 @@ top-489
     }
   }
 
-  &__ {}
-
-  &__ {}
-
-  &__ {}
 
 
   &__repeat-wrap {
     display: inline-block;
     text-align: center;
     display: none;
+    color: #1b1464;
+    padding: 16px 0 0 0;
 
     @include pc {
       display: block;
