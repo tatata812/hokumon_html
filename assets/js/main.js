@@ -25,9 +25,6 @@ $(function () {
   });
 
 
-
-
-
   $(".main-visual-js").slick({
     autoplay: false,
     autoplaySpeed: 4000,
@@ -101,7 +98,18 @@ $(function () {
   // 初回チェック
   checkBreakPoint();
 
+  //フェードイン
+  $(window).scroll(function () {
+    const windowHeight = $(window).height(); //ウィンドウの高さ
+    const scroll = $(window).scrollTop(); //スクロール量
 
+    $(".fade-in-js").each(function () {
+      const targetPosition = $(this).offset().top; //要素の上からの距離
+      if (scroll > targetPosition - windowHeight + 50) {
+        $(this).addClass("action");
+      }
+    });
+  });
 
 
 })
