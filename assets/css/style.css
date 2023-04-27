@@ -23,7 +23,6 @@ a:hover {
 }
 
 a:hover {
-  text-decoration: underline;
   opacity: 0.5;
 }
 
@@ -650,7 +649,12 @@ main-visual
   }
 }
 .main-visual .slick-dots {
-  bottom: 8px;
+  bottom: 42px;
+}
+@media (max-width: 1120px) {
+  .main-visual .slick-dots {
+    bottom: 8px;
+  }
 }
 .main-visual .slick-slider {
   margin-bottom: 0;
@@ -779,6 +783,84 @@ top-489
 .top-489 {
   padding: 0 8px 40px 8px;
 }
+@media screen and (max-width: 1300px) {
+  .top-489 {
+    padding: 0 8px 0 8px;
+    background-color: #ebf8f7;
+  }
+}
+.top-489__form-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: -40px auto 0;
+  background-color: #fff;
+  padding: 12px;
+  z-index: 10;
+  position: relative;
+  border-radius: 40px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+@media screen and (max-width: 1300px) {
+  .top-489__form-wrap {
+    margin: 12px auto 0;
+  }
+}
+@media (max-width: 1120px) {
+  .top-489__form-wrap {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 600px) {
+  .top-489__form-wrap {
+    border-radius: 12px;
+  }
+}
+.top-489__btn-wrap {
+  display: flex;
+  gap: 16px;
+  padding: 8px 0 8px 28px;
+  border-left: solid 1px #c5c5c5;
+}
+@media (max-width: 1120px) {
+  .top-489__btn-wrap {
+    border-left: none;
+    padding: 8px 0 8px 0;
+  }
+}
+.top-489__btn {
+  display: block;
+  color: #1b1464;
+  border: #1b1464 1px solid;
+  width: 180px;
+  text-align: center;
+  padding: 8px;
+  border-radius: 3px;
+}
+@media (max-width: 600px) {
+  .top-489__btn {
+    width: 140px;
+  }
+}
+.top-489__form-ttl {
+  position: relative;
+  margin: 0 50px 0 0;
+}
+.top-489__form-ttl:after {
+  /*画像を絶対配置*/
+  position: absolute;
+  content: "";
+  top: -1px;
+  right: -102px;
+  display: block;
+  width: 100%;
+  height: 22px;
+  background-image: url(../img/top/top-489-img.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  /*画像を繰り返さない*/
+}
 .top-489__repeat-wrap {
   display: inline-block;
   text-align: center;
@@ -790,19 +872,49 @@ top-489
   }
 }
 
+#search_489ban {
+  font-family: inherit;
+  font-size: inherit;
+}
 #search_489ban form {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 600px) {
+  #search_489ban form {
+    flex-wrap: wrap;
+  }
+}
 #search_489ban .date_489ban dt {
   display: inline-block;
+}
+#search_489ban .date_489ban dt label {
+  display: none;
+}
+#search_489ban .date_489ban dd label {
+  font-size: 13px;
 }
 #search_489ban .date_489ban dd {
   display: inline-block;
 }
-#search_489ban .button {
-  display: inline-block;
+#search_489ban button {
+  color: #fff;
+  background-color: #1b1464;
+  width: 180px;
+  text-align: center;
+  padding: 9px;
+  border-radius: 3px;
+  margin: 0 28px;
+}
+@media (max-width: 600px) {
+  #search_489ban button {
+    width: 140px;
+  }
+}
+#search_489ban button:hover {
+  cursor: pointer;
+  opacity: 0.7;
 }
 
 /* =================================
