@@ -280,6 +280,10 @@ footer
   &__logo {
     display: block;
     margin: 0 0 24px;
+
+    @include sp{
+      margin: 0 0 12px;
+    }
   }
 
   &__tel {
@@ -363,12 +367,28 @@ footer
 
     &:last-child {
       border-right: 1px solid #333;
+
+      @include sp{
+        border: none;
+        }
+    }
+
+    @include sp{
+    border: none;
     }
   }
 
   &__bottom {
     border-top: 1px solid #777777;
     padding: 12px 0;
+
+    @include tab{
+      padding: 12px 0 90px;
+    }
+
+    @include sp{
+      padding: 12px 0 60px;
+    }
 
   }
 
@@ -388,7 +408,7 @@ footer
   &__sp-menu {
     display: none;
 
-    @include sp {
+    @include tab {
       display: flex;
       position: fixed;
       bottom: 0;
@@ -405,6 +425,10 @@ footer
     top: -62px;
     right: 16px;
     width: 40px;
+
+    @include tab{
+    display: none;
+    }
   }
 }
 
@@ -920,11 +944,21 @@ top-room
     font-size: 18px;
     font-weight: 100;
     white-space: nowrap;
+
+    @include sp{
+      font-size: 16px;
+
+    }
   }
 
   &__lead {
     color: #fff;
     text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3);
+
+    @include sp{
+      font-size: 12px;
+
+    }
 
   }
 
