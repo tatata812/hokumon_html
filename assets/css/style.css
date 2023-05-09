@@ -901,6 +901,9 @@ footer
     width: 100%;
   }
 }
+.footer__sp-menu a:hover {
+  opacity: 1;
+}
 .footer__scroll-btn {
   cursor: pointer;
   position: absolute;

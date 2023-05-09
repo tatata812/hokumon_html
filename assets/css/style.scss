@@ -82,7 +82,7 @@ header
     left: 10%;
     transform: translateX(-50%);
 
-    @include tab{
+    @include tab {
       left: 12px;
       transform: translateX(0);
 
@@ -457,6 +457,11 @@ footer
       left: 0;
       width: 100%;
     }
+
+    a:hover {
+      opacity: 1;
+    }
+
   }
 
 
