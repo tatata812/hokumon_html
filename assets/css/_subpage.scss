@@ -43,7 +43,7 @@
       @include sp {
         padding: 32px 0 0;
       }
-  
+
     }
   }
 
@@ -52,7 +52,7 @@
     margin: 0 auto 48px;
     padding: 0 20px;
 
-    @include sp{
+    @include sp {
       margin: 0 auto 32px;
     }
   }
@@ -62,7 +62,7 @@
 .page-room-box {
   padding: 60px 20px;
 
-  @include sp{
+  @include sp {
     padding: 40px 20px;
   }
 
@@ -79,7 +79,7 @@
     width: 28px;
     margin: 0 auto 24px;
 
-    @include sp{
+    @include sp {
       margin: 0 auto 0;
     }
   }
@@ -103,8 +103,8 @@
   &__right {
     width: 50%;
 
-    @include tab{
-    width: 100%;
+    @include tab {
+      width: 100%;
     }
   }
 
@@ -116,7 +116,7 @@
     padding: 0 0 4px;
     margin: 0 0 12px 12px;
 
-    @include sp{
+    @include sp {
       font-size: 18px;
       text-align: center;
       margin: 0 0 12px 0;
@@ -129,7 +129,7 @@
     font-weight: 600;
     margin: 0 0 4px 12px;
 
-    @include sp{
+    @include sp {
       font-size: 16px;
       margin: 0 0 4px 0;
 
@@ -139,7 +139,7 @@
   &__text01 {
     margin: 0 0 20px 12px;
 
-    @include sp{
+    @include sp {
       margin: 0 0 20px 0;
     }
   }
@@ -147,7 +147,7 @@
   &__text02 {
     margin: 0 0 8px 12px;
 
-    @include sp{
+    @include sp {
       margin: 0 0 8px 0;
     }
   }
@@ -162,7 +162,7 @@
     display: flex;
     gap: 16px;
 
-    @include sp{
+    @include sp {
       gap: 8px;
     }
 
@@ -173,10 +173,47 @@
   &__img {
     margin: 0 0 16px;
 
-    @include tab{
+    @include tab {
       margin: 0 0 8px;
     }
   }
+}
+
+/* =================================
+客室詳細
+ ================================= */
+
+.single-room {
+
+  &__section01 {
+
+    padding: 40px 20px;
+    background: linear-gradient(180deg, #ebf8f7 0%, #ebf8f7 33%, #fff 33%, #fff 100%);
+
+    @include tab {
+      background: linear-gradient(180deg, #ebf8f7 0%, #fff 33%, #fff 33%, #fff 100%);
+    }
+  }
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
 
   &__ {}
 
@@ -193,35 +230,150 @@
 
 }
 
-/* =================================
 
- ================================= */
+.room-main {
 
-.aaa {
+  &__top-wrap {
+    display: flex;
+    gap: 4%;
+    max-width: 1400px;
+    margin: 0 auto 40px;
 
-  &__ {}
+    @include tab {
+      flex-direction: column;
+      margin: 0 auto 24px;
 
-  &__ {}
+    }
+  }
 
-  &__ {}
+  &__left {
+    width: 65%;
 
-  &__ {}
+    @include pc {
+      width: 60%;
+    }
 
-  &__ {}
+    @include tab {
+      order: 1;
+      width: 100%;
+    }
+  }
 
-  &__ {}
+  &__left-img {
+    overflow: hidden;
 
-  &__ {}
+  }
 
-  &__ {}
+  &__right {
+    width: 400px;
 
-  &__ {}
+    @include tab {
+      width: 100%;
+      margin: 0 0 16px;
+    }
+  }
 
-  &__ {}
+  &__deco {
+    width: 28px;
+    margin: 0 auto -18px;
 
-  &__ {}
+    @include sp {
+      margin: 0 auto 0;
+    }
+  }
 
-  &__ {}
+  &__ttl {
+    color: #1b1464;
+    font-size: 22px;
+    font-weight: 600;
+    border-bottom: #1b1464 1px solid;
+    padding: 0 0 4px;
+    margin: 0 0 24px;
+    text-align: center;
+
+
+    @include sp {
+      font-size: 18px;
+      margin: 0 0 12px 0;
+    }
+  }
+
+  &__ttl-span {
+    font-size: 18px;
+
+    @include sp {
+      font-size: 15px;
+    }
+
+  }
+
+  &__lead {
+    text-align: center;
+    font-size: 16px;
+    margin: 0 0 60px;
+
+    @include pc {
+      margin: 0 0 32px;
+      font-size: 14px;
+
+    }
+  }
+
+  &__plun {
+    max-width: 280px;
+    border: #eee solid 1px;
+    padding: 6px;
+    text-align: center;
+    font-size: 13px;
+    margin: 0 auto 120px;
+    color: #9d9d9d;
+    background-color: #fff;
+
+
+    @include pc {
+      margin: 0 auto 32px;
+    }
+  }
+
+  &__text {
+    max-width: 300px;
+    margin: 0 auto;
+
+    @include tab {
+      max-width: 500px;
+
+    }
+  }
+
+  &__bottom-wrap {
+    display: flex;
+    gap: 12px;
+    max-width: 1400px;
+    margin: 0 auto;
+
+    @include tab {
+      flex-wrap: wrap;
+      gap: 8px;
+
+    }
+  }
+
+  &__bottom-img {
+
+    @include tab {
+      width: calc(50% - 8px);
+      margin: 0 0 16px;
+    }
+  }
+
+  &__bottom-text {
+    margin: 20px 0 0 0;
+
+    @include sp {
+      margin: 8px 0 0 0;
+
+    }
+  }
 
   &__ {}
 
