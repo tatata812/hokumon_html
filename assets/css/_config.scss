@@ -254,6 +254,75 @@ li {
   }
 }
 
+/* =================================
+下層ページ共通
+ ================================= */
+
+// トップ
+
+.sub-top {
+  padding: 16px 0 40px;
+
+  @include sp{
+    padding: 16px 0 12px;
+  }
+
+  &__ttl {
+    max-width: 460px;
+    margin: 0 auto 40px;
+    padding: 0 20px;
+
+    @include sp {
+      margin: 0 auto 20px;
+
+    }
+  }
+
+  &__img {
+    margin: 0 0 60px;
+
+    @include sp {
+      margin: 0 0 40px;
+    }
+  }
+
+  &__lead {
+    max-width: 450px;
+    margin: 0 auto 24px;
+    padding: 0 20px;
+
+    &--l {
+      max-width: 480px;
+    }
+
+    &--m {
+      max-width: 380px;
+    }
+
+    &--s {
+      max-width: 320px;
+    }
+
+    @include sp {
+
+      max-width: 400px;
+
+      &--l {
+        max-width: 400px;
+      }
+
+      &--m {
+        max-width: 400px;
+      }
+
+      &--s {
+        max-width: 400px;
+      }
+    }
+  }
+
+}
+
 
 // 予約ボタン下部
 .reserve_bottom {
