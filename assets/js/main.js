@@ -80,8 +80,9 @@ $(function () {
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrows: false,
+    arrows: true,
     fade: true,
+    dots:true,
   });
   $navigation.each(function (index) { //サムネイルに連番付与属性
     $(this).attr('data-number', index);

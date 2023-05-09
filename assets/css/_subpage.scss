@@ -188,14 +188,14 @@
   &__section01 {
 
     padding: 40px 20px;
-    background: linear-gradient(180deg, #ebf8f7 0%, #ebf8f7 33%, #fff 33%, #fff 100%);
+    background: linear-gradient(180deg, #ebf8f7 0%, #ebf8f7 32%, #fff 32%, #fff 100%);
 
     @include tab {
-      background: linear-gradient(180deg, #ebf8f7 0%, #fff 33%, #fff 33%, #fff 100%);
+      background: linear-gradient(180deg, #ebf8f7 0%, #fff 53%, #fff 53%, #fff 100%);
     }
   }
 
-  &__ {}
+  &__section02 {}
 
   &__ {}
 
@@ -256,6 +256,40 @@
     @include tab {
       order: 1;
       width: 100%;
+    }
+
+    .slick-dots {
+      bottom: -9px;
+      width: 65px;
+      right: -64px;
+
+      @include pc {
+        width: 100%;
+        right: 0;
+        bottom: -25px;
+      }
+
+      li {
+        width: 4px;
+      }
+    }
+
+    .slick-prev {
+      left: -18px;
+      z-index: 10;
+
+      @include sp {
+        display: none;
+      }
+    }
+
+    .slick-next {
+      z-index: 10;
+      right: -5px;
+
+      @include sp {
+        display: none;
+      }
     }
   }
 
@@ -319,7 +353,7 @@
     }
   }
 
-  &__plun {
+  &__plan {
     max-width: 280px;
     border: #eee solid 1px;
     padding: 6px;
@@ -341,7 +375,6 @@
 
     @include tab {
       max-width: 500px;
-
     }
   }
 
@@ -359,6 +392,7 @@
   }
 
   &__bottom-img {
+    cursor: pointer;
 
     @include tab {
       width: calc(50% - 8px);
@@ -368,12 +402,137 @@
 
   &__bottom-text {
     margin: 20px 0 0 0;
+    padding: 0 8px;
 
     @include sp {
       margin: 8px 0 0 0;
+      padding: 0 4px;
+
 
     }
   }
+}
+
+.room-explanation {
+  background-color: #ebf8f7;
+  padding: 60px 8px 0;
+
+  &__box {
+    max-width: 880px;
+    background-color: #fff;
+    margin: 0 auto;
+    padding: 40px 100px;
+    border-radius: 14px;
+
+    @include tab {
+      padding: 40px;
+    }
+
+    @include sp {
+      padding: 24px 12px;
+    }
+  }
+
+  &__ttl {
+    text-align: center;
+    margin: 0 0 14px;
+
+  }
+
+  &__name {
+    color: #1b1464;
+    border: 1px #1b1464 solid;
+    padding: 4px;
+    text-align: center;
+    margin: 0 0 16px;
+    font-size: 18px;
+  }
+
+  &__plan {
+    text-align: center;
+    font-size: 13px;
+    margin: 0 0 40px;
+
+    @include sp {
+      margin: 0 0 24px;
+
+    }
+
+  }
+
+  &__table {
+    font-size: 14px;
+  }
+
+  &__th {
+    width: 100px;
+    font-weight: 100;
+    text-align: left;
+    padding: 12px 0;
+  }
+
+  &__td {
+    word-break: keep-all;
+    padding: 12px 0;
+
+    &--normal {
+      word-break: normal;
+    }
+  }
+}
+
+.room-list {
+  padding: 60px 20px;
+
+  &__ttl {
+    color: #1b1464;
+    border-bottom: #1b1464 1px solid;
+    max-width: 300px;
+    margin: 0 auto 60px;
+    padding: 0 0 12px;
+    text-align: center;
+    font-size: 22px;
+    position: relative;
+    font-weight: 100;
+
+    &::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-top: solid 2px currentColor;
+      border-right: solid 2px;
+      position: absolute;
+      bottom: 22px;
+      right: 28px;
+      font-size: 90%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: translateY(-50%) rotate(45deg);
+    }
+  }
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
 
   &__ {}
 
