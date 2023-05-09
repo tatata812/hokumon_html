@@ -31,6 +31,36 @@ header
   width: 100%;
 }
 
+.header-sub {
+
+  border-bottom: 2px solid #1b1464;
+
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__link {
+    display: block;
+    background-color: #1b1464;
+    color: #fff;
+    padding: 8px;
+    width: 150px;
+    max-width: 150px;
+    text-align: center;
+    border-radius: 3px;
+    margin: 0 0 0 8px;
+    letter-spacing: 0.4rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+    @include tab {
+      display: none;
+    }
+  }
+}
+
 .header {
   background-color: #fff;
   position: fixed;
@@ -40,6 +70,23 @@ header
   @include tab {
     border-bottom: 1px #8a8a8a solid;
 
+  }
+
+  &__breadcrumb {
+    font-size: 12px;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #777777;
+    position: absolute;
+    bottom: -28px;
+    left: 10%;
+    transform: translateX(-50%);
+
+    @include tab{
+      left: 12px;
+      transform: translateX(0);
+
+    }
   }
 
   &__inner {
@@ -109,6 +156,7 @@ header
     width: 120px;
     border-left: 1px solid #333;
 
+
     &:last-child {
       border-right: 1px solid #333;
     }
@@ -121,12 +169,6 @@ header
       width: 88px;
     }
 
-    &:hover {
-      background-color: #c5c5c5;
-      cursor: pointer;
-    }
-
-
   }
 
   &__nav-link {
@@ -134,13 +176,20 @@ header
     display: block;
     font-size: 13px;
     letter-spacing: 0.5em;
-    padding: 2px 0 2px 0.5em;
+    padding: 4px 0 4px 0.5em;
+    line-height: 13px;
+
 
     &:hover {
-      text-decoration: none;
+      border: 1px solid #000;
+      margin: 0 2px;
+    }
+
+
+    @include pc {
+      letter-spacing: 0.4em;
     }
   }
-
 
   &__open-btn {
     position: relative;
@@ -647,7 +696,7 @@ top-489
       flex-wrap: wrap;
     }
 
-    @include sp{
+    @include sp {
       border-radius: 12px;
 
     }
@@ -659,12 +708,12 @@ top-489
     padding: 8px 0 8px 28px;
     border-left: solid 1px #c5c5c5;
 
-@include pc{
-  border-left: none;
-  padding: 8px 0 8px 0;
+    @include pc {
+      border-left: none;
+      padding: 8px 0 8px 0;
 
 
-}
+    }
   }
 
   &__btn {
@@ -676,7 +725,7 @@ top-489
     padding: 8px;
     border-radius: 3px;
 
-    @include sp{
+    @include sp {
       width: 140px;
 
     }
@@ -729,7 +778,7 @@ top-489
     justify-content: center;
     align-items: center;
 
-    @include sp{
+    @include sp {
       flex-wrap: wrap;
     }
   }
@@ -759,7 +808,7 @@ top-489
     border-radius: 3px;
     margin: 0 28px;
 
-    @include sp{
+    @include sp {
       width: 140px;
     }
 

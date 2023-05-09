@@ -80,13 +80,38 @@ li {
 }
 
 
-.main {
 
-  padding: 100px 0 0 0;
+.main {
+  padding: 148px 0 0;
+
+
+  @media screen and (max-width: 1550px) {
+    padding: 132px 0 0 0;
+
+  }
+
+  @media screen and (max-width: 1250px) {
+    padding: 120px 0 0 0;
+
+  }
+
+  @media screen and (max-width: 1120px) {
+    padding: 110px 0 0 0;
+
+  }
 
   @include pc {
-    padding: 58px 0 0 0;
+    padding: 104px 0 0 0;
   }
+
+  @include tab {
+    padding: 98px 0 0 0;
+  }
+
+  @include sp {
+    padding: 88px 0 0 0;
+  }
+
 
   &__section-inner {
     max-width: 1400px;
@@ -174,7 +199,7 @@ li {
   &__img {
     overflow: hidden;
 
-    
+
   }
 
   &__text-wrap {
@@ -192,7 +217,7 @@ li {
       font-size: 15px;
       font-weight: 700;
 
-      @include sp{
+      @include sp {
         font-size: 14px;
       }
     }
@@ -202,7 +227,7 @@ li {
       font-size: 15px;
       font-weight: 700;
 
-      @include sp{
+      @include sp {
         font-size: 14px;
       }
 
@@ -227,6 +252,55 @@ li {
     padding: 3px 8px;
     margin: 0 0 4px;
   }
+}
+
+
+// 予約ボタン下部
+.reserve_bottom {
+  border-top: #777777 1px solid;
+  padding: 60px 20px;
+
+  @include sp{
+    padding: 40px 20px;
+  }
+
+  &__text {
+    text-align: center;
+    color: #960000;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 16px;
+
+    @include sp{
+      font-size: 15px;
+
+    }
+
+  }
+
+  &__btn-wrap {
+    display: flex;
+    max-width: 600px;
+    gap: 16px;
+    margin: 0 auto;
+
+    @include sp{
+      flex-direction: column;
+      align-items: center;
+    }
+
+  }
+
+  &__btn {
+    max-width: 280px;
+  }
+
+ 
+
+  &__ {}
+
+  &__ {}
+
 }
 
 //フェードイン　アニメーション
