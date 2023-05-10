@@ -698,6 +698,12 @@ li {
     margin: 0 0 16px;
   }
 }
+.room-main__bottom-img img {
+  opacity: 0.5;
+}
+.room-main__bottom-img.current img {
+  opacity: 1;
+}
 .room-main__bottom-text {
   margin: 20px 0 0 0;
   padding: 0 8px;

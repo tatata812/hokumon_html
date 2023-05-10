@@ -133,3 +133,10 @@ $(function () {
     });
   });
 })
+
+// パララックス
+
+var image = document.getElementsByClassName('sub-top-js');
+new simpleParallax(image, {
+	scale: 1.2,
+});

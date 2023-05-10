@@ -393,11 +393,26 @@
 
   &__bottom-img {
     cursor: pointer;
+    
+
 
     @include tab {
       width: calc(50% - 8px);
       margin: 0 0 16px;
     }
+
+    img {
+      opacity: 0.5;
+    }
+
+    &.current {
+      img {
+        opacity: 1;
+
+      }
+
+    }
+
   }
 
   &__bottom-text {
@@ -518,11 +533,11 @@
     display: flex;
     gap: 60px;
 
-    @include tab{
+    @include tab {
       gap: 30px;
     }
 
-    @include sp{
+    @include sp {
       flex-direction: column;
       align-items: center;
     }
@@ -531,11 +546,11 @@
   &__block {
     width: calc(33.333% - 30px);
 
-    @include tab{
+    @include tab {
       width: calc(33.333% - 15px);
     }
 
-    @include sp{
+    @include sp {
       width: 100%;
       max-width: 320px;
     }
