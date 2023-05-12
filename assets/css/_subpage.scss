@@ -484,10 +484,13 @@
     font-weight: 100;
     text-align: left;
     padding: 12px 0;
+
+    @include sp{
+      width: 86px;
+    }
   }
 
   &__td {
-    word-break: keep-all;
     padding: 12px 0;
 
     &--normal {

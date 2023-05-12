@@ -767,8 +767,12 @@ li {
   text-align: left;
   padding: 12px 0;
 }
+@media (max-width: 600px) {
+  .room-explanation__th {
+    width: 86px;
+  }
+}
 .room-explanation__td {
-  word-break: keep-all;
   padding: 12px 0;
 }
 .room-explanation__td--normal {
