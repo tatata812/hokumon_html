@@ -25,17 +25,21 @@
 
   &__section {
     border-top: 1px solid #7b9553;
-    padding: 48px 0;
+    padding: 48px 0 0;
 
     @include sp {
-      padding: 32px 0;
+      padding: 32px 0 0;
     }
 
     &--tokubetsu {
       border-top: 1px solid #bc8f38;
     }
 
-    &--moderate {
+    &--onsen {
+      border-top: 1px solid #e1a654;
+    }
+
+    &--wayou {
       border-top: 1px solid #9c7f69;
 
       padding: 48px 0 100px;
@@ -393,7 +397,7 @@
 
   &__bottom-img {
     cursor: pointer;
-    
+
 
 
     @include tab {
@@ -485,7 +489,7 @@
     text-align: left;
     padding: 12px 0;
 
-    @include sp{
+    @include sp {
       width: 86px;
     }
   }
@@ -503,6 +507,7 @@
   padding: 60px 20px;
 
   &__ttl {
+    display: block;
     color: #1b1464;
     border-bottom: #1b1464 1px solid;
     max-width: 300px;
@@ -531,13 +536,14 @@
   }
 
   &__box {
-    max-width: 920px;
+    max-width: 1180px;
     margin: 0 auto;
     display: flex;
-    gap: 60px;
+    gap: 40px;
 
-    @include tab {
-      gap: 30px;
+    @include pc {
+      gap: 20px;
+      flex-wrap: wrap;
     }
 
     @include sp {
@@ -549,8 +555,8 @@
   &__block {
     width: calc(33.333% - 30px);
 
-    @include tab {
-      width: calc(33.333% - 15px);
+    @include pc {
+      width: calc(50% - 15px);
     }
 
     @include sp {
@@ -571,7 +577,11 @@
       color: #bc8f38;
     }
 
-    &--moderate {
+    &--onsen {
+      color: #e1a654;
+    }
+
+    &--wayou {
       color: #7b9553;
     }
 
@@ -604,7 +614,11 @@
       color: #bc8f38;
     }
 
-    &--moderate {
+    &--onsen {
+      color: #e1a654;
+    }
+
+    &--wayou {
       color: #7b9553;
     }
 
