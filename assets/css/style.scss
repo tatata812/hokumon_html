@@ -499,16 +499,74 @@ main-visual
 
   &__item-img {}
 
+
+  &__info-wrap {
+    position: absolute;
+    background-color: rgba(27, 27, 27, 0.5);
+    bottom: 60px;
+    left: 60px;
+    z-index: 2;
+    padding: 4px 16px;
+    color: #fff;
+    max-width: 520px;
+
+    @media screen and (max-width: 1300px) {
+      bottom: 16px;
+    }
+
+    @include pc {
+      padding: 12px;
+      left: 60px;
+      bottom: 40px;
+
+    }
+
+    @include sp {
+      padding: 4px 8px;
+    }
+
+  }
+
+
+  &__info-ttl {
+    font-size: 18px;
+    margin: 8px;
+  }
+
+  &__info-article {
+    margin: 0 0 12px;
+  }
+
+  &__info-date {
+    display: block;
+    font-size: 12px;
+    line-height: 1;
+  }
+
+  &__info-subttl {
+    color: #fff;
+
+  }
+
+  &__info-link {
+    color: #fff;
+    display: block;
+    width: 100px;
+    margin: 0 0 0 auto;
+    font-size: 13px;
+
+  }
+
   &__tel-wrap {
     position: absolute;
-    top: 40px;
+    top: 18px;
     left: 87%;
     transform: translateX(-50%);
   }
 
   &__repeat-wrap {
     position: absolute;
-    top: 75%;
+    top: 180px;
     left: 87%;
     transform: translateX(-50%);
 
@@ -535,12 +593,12 @@ main-visual
   }
 
   .slick-prev {
-    left: 30px;
+    left: 20px;
     z-index: 2;
   }
 
   .slick-next {
-    right: 30px;
+    right: 20px;
   }
 
 }
@@ -553,15 +611,22 @@ main-visual
   &__text-wrap {
     position: absolute;
     background-color: rgba(27, 27, 27, 0.5);
-    bottom: 40px;
-    left: 40px;
+    bottom: 60px;
+    left: 85%;
+    transform: translateX(-50%);
     z-index: 2;
-    padding: 24px 16px;
+    padding: 8px 16px;
+    width: 360px;
+
+    @media screen and (max-width: 1300px) {
+      bottom: 16px;
+    }
 
     @include pc {
       padding: 12px;
       bottom: 16px;
-      left: 16px;
+      width: auto;
+
     }
 
     @include sp {
@@ -570,9 +635,10 @@ main-visual
 
   }
 
+
   &__ttl {
     color: #fff;
-    margin: 0 0 12px;
+    margin: 0 0 8px;
 
     @include pc {
       margin: 0;
@@ -582,7 +648,7 @@ main-visual
 
   &__lead {
     color: #fff;
-    font-size: 14px;
+    font-size: 12px;
 
     @include pc {
       display: none;
@@ -636,7 +702,7 @@ main-visual
 // リピーター
 .top-repeat-wrap {
   background-color: #960000;
-  padding: 14px;
+  padding: 8px 19px;
   border-radius: 3px;
 
   @include pc {
@@ -850,13 +916,30 @@ top-info
     margin: 0 12px;
   }
 
-  &__ {}
+  &__sp-wrap {}
 
-  &__ {}
+  &__sp-article {
+    margin: 0 0 24px;
+    border-bottom: #c5c5c5 1px solid;
+    padding: 0 6px 6px;
 
-  &__ {}
+    &:last-of-type{
+      margin: 0;
+    }
+  }
 
-  &__ {}
+  &__sp-date {
+    display: block;
+    font-size: 12px;
+    line-height: 1;
+    margin: 0 0 8px;
+
+  }
+
+  &__sp-subttl {
+    line-height: 1.4;
+    display: block;
+  }
 
   &__ {}
 
@@ -1158,12 +1241,10 @@ top-plan
  ================================= */
 
 .top-plan {
-  background-color: #ebf8f7;
-
-
 
   &--purpose {
-    background-color: #fff;
+    background-color: #ebf8f7;
+
   }
 
   &__ttl-wrap {
@@ -1248,7 +1329,6 @@ top-link
 
 .top-link {
 
-  background-color: #ebf8f7;
 
   &__ttl-wrap {
     margin: 0 0 60px;

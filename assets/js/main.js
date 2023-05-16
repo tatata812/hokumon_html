@@ -26,7 +26,7 @@ $(function () {
 
 
   $(".main-visual-js").slick({
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 4000,
     fade: true,
     cssEase: 'linear', // アニメーション

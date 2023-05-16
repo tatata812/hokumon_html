@@ -104,6 +104,9 @@ li {
   max-width: 460px;
   margin: 0 auto 24px;
 }
+.section-ttl__ttl--insta {
+  max-width: 70px;
+}
 .section-ttl__lead {
   max-width: 420px;
   margin: 0 auto 24px;
@@ -148,6 +151,10 @@ li {
 .top-article__img {
   overflow: hidden;
 }
+.top-article__img--purpose {
+  padding: 4px 0 0 0;
+  background-color: #ebf8f7;
+}
 .top-article__text-wrap {
   min-height: 136px;
   background-color: #fff;
@@ -189,7 +196,7 @@ li {
 .top-article__cat {
   border-left: #002e73 2px solid;
   padding: 3px 8px;
-  margin: 0 0 4px;
+  background-color: #ebf8f7;
 }
 
 /* =================================
@@ -1327,15 +1334,64 @@ main-visual
 .main-visual__list {
   background-color: #000;
 }
+.main-visual__info-wrap {
+  position: absolute;
+  background-color: rgba(27, 27, 27, 0.5);
+  bottom: 60px;
+  left: 60px;
+  z-index: 2;
+  padding: 4px 16px;
+  color: #fff;
+  max-width: 520px;
+}
+@media screen and (max-width: 1300px) {
+  .main-visual__info-wrap {
+    bottom: 16px;
+  }
+}
+@media (max-width: 1120px) {
+  .main-visual__info-wrap {
+    padding: 12px;
+    left: 60px;
+    bottom: 40px;
+  }
+}
+@media (max-width: 600px) {
+  .main-visual__info-wrap {
+    padding: 4px 8px;
+  }
+}
+.main-visual__info-ttl {
+  font-size: 18px;
+  margin: 8px;
+}
+.main-visual__info-article {
+  margin: 0 0 12px;
+}
+.main-visual__info-date {
+  display: block;
+  font-size: 12px;
+  line-height: 1;
+}
+.main-visual__info-subttl {
+  color: #fff;
+}
+.main-visual__info-link {
+  color: #fff;
+  display: block;
+  width: 100px;
+  margin: 0 0 0 auto;
+  font-size: 13px;
+}
 .main-visual__tel-wrap {
   position: absolute;
-  top: 40px;
+  top: 18px;
   left: 87%;
   transform: translateX(-50%);
 }
 .main-visual__repeat-wrap {
   position: absolute;
-  top: 75%;
+  top: 180px;
   left: 87%;
   transform: translateX(-50%);
 }
@@ -1356,11 +1412,11 @@ main-visual
   margin-bottom: 0;
 }
 .main-visual .slick-prev {
-  left: 30px;
+  left: 20px;
   z-index: 2;
 }
 .main-visual .slick-next {
-  right: 30px;
+  right: 20px;
 }
 
 .main-visual-item {
@@ -1369,16 +1425,23 @@ main-visual
 .main-visual-item__text-wrap {
   position: absolute;
   background-color: rgba(27, 27, 27, 0.5);
-  bottom: 40px;
-  left: 40px;
+  bottom: 60px;
+  left: 85%;
+  transform: translateX(-50%);
   z-index: 2;
-  padding: 24px 16px;
+  padding: 8px 16px;
+  width: 360px;
+}
+@media screen and (max-width: 1300px) {
+  .main-visual-item__text-wrap {
+    bottom: 16px;
+  }
 }
 @media (max-width: 1120px) {
   .main-visual-item__text-wrap {
     padding: 12px;
     bottom: 16px;
-    left: 16px;
+    width: auto;
   }
 }
 @media (max-width: 600px) {
@@ -1388,7 +1451,7 @@ main-visual
 }
 .main-visual-item__ttl {
   color: #fff;
-  margin: 0 0 12px;
+  margin: 0 0 8px;
 }
 @media (max-width: 1120px) {
   .main-visual-item__ttl {
@@ -1397,7 +1460,7 @@ main-visual
 }
 .main-visual-item__lead {
   color: #fff;
-  font-size: 14px;
+  font-size: 12px;
 }
 @media (max-width: 1120px) {
   .main-visual-item__lead {
@@ -1440,7 +1503,7 @@ main-visual
 
 .top-repeat-wrap {
   background-color: #960000;
-  padding: 14px;
+  padding: 8px 19px;
   border-radius: 3px;
 }
 @media (max-width: 1120px) {
@@ -1634,6 +1697,24 @@ top-info
 }
 .top-info__item {
   margin: 0 12px;
+}
+.top-info__sp-article {
+  margin: 0 0 24px;
+  border-bottom: #c5c5c5 1px solid;
+  padding: 0 6px 6px;
+}
+.top-info__sp-article:last-of-type {
+  margin: 0;
+}
+.top-info__sp-date {
+  display: block;
+  font-size: 12px;
+  line-height: 1;
+  margin: 0 0 8px;
+}
+.top-info__sp-subttl {
+  line-height: 1.4;
+  display: block;
 }
 /* =================================
 top-holiday
@@ -1875,11 +1956,8 @@ top-meal
 /* =================================
 top-plan
  ================================= */
-.top-plan {
-  background-color: #ebf8f7;
-}
 .top-plan--purpose {
-  background-color: #fff;
+  background-color: #ebf8f7;
 }
 .top-plan__ttl-wrap {
   margin: 0 0 60px;
@@ -1919,9 +1997,6 @@ top-purpose
 /* =================================
 top-link
  ================================= */
-.top-link {
-  background-color: #ebf8f7;
-}
 .top-link__ttl-wrap {
   margin: 0 0 60px;
   position: relative;
