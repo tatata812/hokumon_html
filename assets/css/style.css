@@ -105,7 +105,7 @@ li {
   margin: 0 auto 24px;
 }
 .section-ttl__ttl--insta {
-  max-width: 70px;
+  max-width: 50px;
 }
 .section-ttl__lead {
   max-width: 420px;
@@ -1821,9 +1821,10 @@ top-room
 }
 .top-room__bottom-box {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 16px;
   flex-wrap: wrap;
+  margin: 0 0 16px;
 }
 @media (max-width: 600px) {
   .top-room__bottom-box {

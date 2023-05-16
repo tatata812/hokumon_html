@@ -1074,9 +1074,10 @@ top-room
 
   &__bottom-box {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     gap: 16px;
     flex-wrap: wrap;
+    margin: 0 0 16px;
 
     @include sp {
       gap: 12px;
