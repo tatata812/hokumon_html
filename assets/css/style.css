@@ -156,7 +156,7 @@ li {
   background-color: #ebf8f7;
 }
 .top-article__text-wrap {
-  min-height: 136px;
+  min-height: 120px;
   background-color: #fff;
   padding: 12px;
 }
@@ -542,7 +542,7 @@ li {
  ================================= */
 .single-room__section01 {
   padding: 40px 20px;
-  background: linear-gradient(180deg, #ebf8f7 0%, #ebf8f7 32%, #fff 32%, #fff 100%);
+  background: linear-gradient(180deg, #ebf8f7 0%, #ebf8f7 48%, #fff 48%, #fff 100%);
 }
 @media (max-width: 820px) {
   .single-room__section01 {
@@ -755,7 +755,7 @@ li {
   border: 1px #1b1464 solid;
   padding: 4px;
   text-align: center;
-  margin: 0 0 16px;
+  margin: 0 0 40px;
   font-size: 18px;
 }
 .room-explanation__plan {
@@ -1353,7 +1353,7 @@ main-visual
   z-index: 2;
   padding: 4px 16px;
   color: #fff;
-  max-width: 520px;
+  max-width: 700px;
 }
 @media screen and (max-width: 1300px) {
   .main-visual__info-wrap {
@@ -1377,12 +1377,15 @@ main-visual
   margin: 8px;
 }
 .main-visual__info-article {
-  margin: 0 0 12px;
+  margin: 0 0 4px;
+  display: flex;
+  align-items: center;
 }
 .main-visual__info-date {
   display: block;
   font-size: 12px;
   line-height: 1;
+  white-space: nowrap;
 }
 .main-visual__info-subttl {
   color: #fff;
