@@ -82,7 +82,7 @@ $(function () {
     slidesToScroll: 1,
     arrows: true,
     fade: true,
-    dots:true,
+    dots: true,
   });
   $navigation.each(function (index) { //サムネイルに連番付与属性
     $(this).attr('data-number', index);
@@ -132,11 +132,26 @@ $(function () {
       }
     });
   });
+
+  // ヘッダー隠れる動き
+
+  let startPos = 0;
+  let winScrollTop = 0;
+  const Header = $('.wrap-header');
+  $(window).on('scroll', function () {
+    winScrollTop = $(this).scrollTop();
+    if (winScrollTop >= startPos && winScrollTop > 100) { // ここにコードを追加
+      $(Header).addClass('is-hide');
+    } else {
+      $(Header).removeClass('is-hide');
+    }
+    startPos = winScrollTop;
+  });
 })
 
 // パララックス
 
 var image = document.getElementsByClassName('sub-top-js');
 new simpleParallax(image, {
-	scale: 1.2,
+  scale: 1.2,
 });
