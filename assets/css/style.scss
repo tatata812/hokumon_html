@@ -542,6 +542,7 @@ main-visual
     margin: 0 0 4px;
     display: flex;
     align-items: center;
+    gap: 8px;
   }
 
   &__info-date {
@@ -936,7 +937,7 @@ top-info
     border-bottom: #c5c5c5 1px solid;
     padding: 0 6px 6px;
 
-    &:last-of-type{
+    &:last-of-type {
       margin: 0;
     }
   }
