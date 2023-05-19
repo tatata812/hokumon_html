@@ -1384,6 +1384,7 @@ main-visual
   margin: 0 0 4px;
   display: flex;
   align-items: center;
+  gap: 8px;
 }
 .main-visual__info-date {
   display: block;
