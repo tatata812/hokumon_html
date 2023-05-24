@@ -362,8 +362,8 @@ li {
   border-top: #777777 1px solid;
   padding: 60px 20px;
 
-  @include sp {
-    padding: 40px 20px;
+  @include tab {
+   display: none;
   }
 
   &--room {
