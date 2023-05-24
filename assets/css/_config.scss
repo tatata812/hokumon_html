@@ -268,6 +268,25 @@ li {
 下層ページ共通
  ================================= */
 
+
+.page {
+
+  &__section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+  }
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+}
+
 // トップ
 
 .sub-top {
@@ -384,13 +403,6 @@ li {
   &__btn {
     max-width: 280px;
   }
-
-
-
-  &__ {}
-
-  &__ {}
-
 }
 
 //フェードイン　アニメーション
@@ -437,6 +449,7 @@ li {
 // エディター設定
 
 .page-style {
+
   &__block {
     margin: 0 0 60px;
   }
@@ -453,26 +466,24 @@ li {
 
   p {
     margin: 0 0 12px;
-    font-size: 18px;
-    line-height: 24px;
   }
 
   h1 {
-    font-size: 28px;
+    font-size: 24px;
     margin: 24px 0 32px;
     background: linear-gradient(transparent 70%, #a7d6ff 70%);
 
   }
 
   h2 {
-    font-size: 24px;
+    font-size: 20px;
     margin: 24px 0 20px;
     color: #002e73;
     font-weight: bold;
   }
 
   h3 {
-    font-size: 20px;
+    font-size: 18px;
     margin: 24px 0 16px;
 
   }
@@ -486,8 +497,8 @@ li {
     line-height: 24px;
 
     li {
-      font-size: 18px;
       list-style: decimal;
+      font-size: clamp(0.813rem, 0.79rem + 0.11vw, 0.875rem);
     }
   }
 
@@ -496,7 +507,7 @@ li {
     line-height: 24px;
 
     li {
-      font-size: 18px;
+      font-size: clamp(0.813rem, 0.79rem + 0.11vw, 0.875rem);
       list-style: disc;
     }
   }

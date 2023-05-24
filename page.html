@@ -1,0 +1,151 @@
+<!-- <?php
+  $des="サイト説明文が入ります。サイト説明文が入ります。サイト説明文が入ります。サイト説明文が入ります。サイト説明文が入ります。"
+  ; ?> -->
+<!DOCTYPE html>
+<html lang="ja" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="email=no,telephone=no,address=no">
+  <!--!!!!!!!!!!!!!!!!!WPでは不要!!!!!!!!!!!!!!!!!!!!!-->
+  <title>北門屋敷 ページ</title>
+  <meta name="description" content="<?php echo $des; ?>">
+  <!--!!!!!!!!!!!!!!!!!公開時、allに変更する!!!!!!!!!!!!!!!!!!!!!-->
+  <meta name="robots" content="none">
+  <meta property="og:type" content="website">
+  <meta property="og:title"
+    content="<?php wp_title( '-', true, 'right' ); ?><?php bloginfo( 'name' ); ?> | <?php echo $des; ?>">
+  <meta property="og:description" content="<?php echo $des; ?>">
+  <meta property="og:site_name"
+    content="<?php wp_title( '-', true, 'right' ); ?><?php bloginfo( 'name' ); ?> | <?php echo $des; ?>">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/assets/img/fb.jpg">
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title"
+    content="<?php wp_title( '-', true, 'right' ); ?><?php bloginfo( 'name' ); ?> | <?php echo $des; ?>">
+  <meta name="twitter:description" content="<?php echo $des; ?>">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+  <link rel="stylesheet" href="assets/css/html5reset-1.6.1.css">
+  <link rel="stylesheet" href="assets/css/style.css?20230220">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+
+<body class="wrap">
+
+  <header class="header wrap-header header-sub">
+    <div class="header__inner header-sub__inner">
+      <h1 class="header__ttl"><a href="index.html"><img src="assets/img/top/logo.png" alt=""></a>
+      </h1>
+      <nav>
+        <ul class="header__nav-list">
+          <li class="header__nav-item"><a href="room.html" class="header__nav-link">客室</a></li>
+          <li class="header__nav-item"><a href="" class="header__nav-link">施設</a></li>
+          <li class="header__nav-item"><a href="" class="header__nav-link">料理</a></li>
+          <li class="header__nav-item"><a href="" class="header__nav-link">プラン</a></li>
+          <li class="header__nav-item"><a href="" class="header__nav-link">アクセス</a></li>
+          <li class="header__nav-item"><a href="" class="header__nav-link">過ごし方</a></li>
+        </ul>
+      </nav>
+      <a href="https://reserve.489ban.net/client/hokumon/0/plan?" class="header-sub__link" target="_blank"
+        rel="noopener">予約</a>
+      <div class="header__open-btn">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+
+    <div class="header-sp">
+      <div class="header-sp__inner">
+        <nav>
+          <ul class="header-sp__nav-list">
+            <li class="header-sp__nav-item"><a href="" class="header-sp__nav-link">メニュ</a></li>
+            <li class="header-sp__nav-item"><a href="#" class="header-sp__nav-link">メニュー</a></li>
+            <li class="header-sp__nav-item"><a href="#" class="header-sp__nav-link">メニュー</a></li>
+            <li class="header-sp__nav-item"><a href="#" class="header-sp__nav-link">メニュー</a></li>
+            <li class="header-sp__nav-item"><a href="#" class="header-sp__nav-link">メニュー</a></li>
+            <li class="header-sp__nav-item"><a href="" class="header-sp__nav-link">メニュー</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="header__breadcrumb">ホーム　＞　〇〇〇〇</div>
+  </header>
+
+
+  <div class="main page-">
+    <section class="sub-top">
+      <h1 class="sub-top__ttl"><img src="assets/img/room/page-room-ttl.png" alt="客室"></h1>
+      <div class="sub-top__img"><img src="assets/img/room/page-room-top.jpg" class="sub-top-js"></div>
+      <p class="sub-top__lead">壁の肌質、柱の木目、床の質感。<br>
+        こだわりのしつらえに見る、本物の豊かさ。</p>
+      <p class="sub-top__lead">和の美意識、洋の快適さ。<br>
+        お庭へ目をやれば、名画のように迫る四季の草木の彩りと薫り。</p>
+      <p class="sub-top__lead">心地よい明るさと静寂さでおくつろぎいただける客室は<br class="pc-block">ご希望のステイスタイルに応じてお選びいただけますよう<br
+          class="pc-block">
+        多様なバリエーションで個性あるお部屋をご用意いたしました。</p>
+    </section>
+
+
+
+  </div>
+  <!--main end-->
+
+
+  <footer class="footer">
+    <div class="footer__top">
+      <div class="footer__ttl">
+        <a href="index.html" class="footer__logo"><img src="assets/img/top/logo.png" alt=""></a>
+        <a href="tel:0838-22-7521" class="footer__tel"><span class="footer__tel-span">TEL.</span>0838-22-7521</a>
+        <p class="footer__address">〒583-0057 山口県萩市堀内210</p>
+      </div>
+      <div class="footer__menu">
+        <a href="#" class="footer__menu-item">よく頂くご質問</a>
+        <a href="#" class="footer__menu-item">ブログ</a>
+        <a href="#" class="footer__menu-item">お問い合わせ</a>
+      </div>
+      <div class="footer__sns">
+        <a href="#" class="footer__sns-item"><img src="assets/img/top/footer-sns-i.png" alt=""></a>
+        <a href="#" class="footer__sns-item"><img src="assets/img/top/footer-sns-t.png" alt=""></a>
+        <a href="#" class="footer__sns-item"><img src="assets/img/top/footer-sns-f.png" alt=""></a>
+      </div>
+      <div class="footer__scroll-btn top-to-js"><img src="assets/img/top/scroll-btn.png" alt="TOPへ"></div>
+    </div>
+    <nav class="footer__nev">
+      <a href="room.html" class="footer__nav-item">客室</a>
+      <a href="#" class="footer__nav-item">施設</a>
+      <a href="#" class="footer__nav-item">料理</a>
+      <a href="#" class="footer__nav-item">プラン</a>
+      <a href="#" class="footer__nav-item">アクセス</a>
+      <a href="#" class="footer__nav-item">過ごし方</a>
+      <a href="#" class="footer__nav-item">このサイトについて</a>
+      <a href="#" class="footer__nav-item">個人情報保護方針</a>
+      <a href="#" class="footer__nav-item">サイトマップ</a>
+    </nav>
+    <div class="footer__bottom">
+      <p class="footer__coppy">Copyright © 2023 hokumon yashiki All Rights Reserved.</p>
+    </div>
+    <div class="footer__sp-menu sp-block">
+      <a href="#"></a>
+    </div>
+    <div class="footer__sp-menu">
+      <a href="tel:0838-22-7521"><img src="assets/img/top/sp-menu01.jpg" alt="0838-22-7521"></a>
+      <a href="https://reserve.489ban.net/client/hokumon/0/plan?" target="_blank"><img
+          src="assets/img/top/sp-menu02.jpg" alt="予約"></a>
+      <a href="https://reserve.489ban.net/client/hokumon/0/booked/login?" target="_blank"><img
+          src="assets/img/top/sp-menu03.jpg" alt="予約確認・キャンセル"></a>
+      <a href="#top" class="top-to-js"><img src="assets/img/top/sp-menu04.jpg" alt="TOPへ戻る"></a>
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.6.2/dist/simpleParallax.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
