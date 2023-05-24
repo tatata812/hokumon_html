@@ -1,5 +1,6 @@
 @use "config";
-@use "subpage";
+@use "room";
+@use "other";
 
 @mixin sp {
   @media (max-width:(600px)) {

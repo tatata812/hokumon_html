@@ -1,0 +1,276 @@
+@mixin sp {
+  @media (max-width:(600px)) {
+    @content;
+  }
+}
+
+@mixin tab {
+  @media (max-width:(820px)) {
+    @content;
+  }
+}
+
+@mixin pc {
+  @media (max-width:(1120px)) {
+    @content;
+  }
+}
+
+/* =================================
+よく頂くご質問
+ ================================= */
+
+.page-question {
+
+  &__top-link-wrap {
+    max-width: 1200px;
+    margin: 0 auto 60px;
+    display: flex;
+    justify-content: center;
+
+    @include tab{
+      flex-wrap: wrap
+    }
+  }
+
+  &__top-link {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+    border: #000 1px solid;
+    padding: 8px;
+    margin: 8px 2%;
+    color: #000;
+
+    &:hover {
+      background-color: #eee;
+      opacity: 0.8;
+    }
+
+    @include tab{
+      margin: 8px 1%;
+      padding: 4px;
+      font-size: 14px;
+    }
+  }
+
+  &__section {
+    margin: 0 auto 40px auto;
+    max-width: 1080px;
+    padding: 0 20px;
+  }
+
+  &__section-ttl {
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+
+  &__box {
+    margin-bottom: 0 !important;
+  }
+
+  &__question-wrap {
+    cursor: pointer;
+    background-color: #eee;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    position: relative;
+  }
+
+  &__question {
+
+    &::before {
+      content: 'Q';
+      background-color: #333;
+      color: #fff;
+      border-radius: 20px;
+      padding: 2px 4px;
+      box-sizing: border-box;
+      margin-right: 5px;
+    }
+  }
+
+  &__arrow {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-top: 1px solid #666;
+    border-right: 1px solid #666;
+    transform: rotate(135deg);
+    transition: all 0.5s;
+    margin: 0 20px;
+    min-width: 10px;
+
+    &.active {
+      transform: rotate(315deg);
+    }
+  }
+
+  &__answer-wrap {
+    padding: 16px;
+    max-height: 0;
+    opacity: 0;
+    transition: all 1s;
+
+    &.active {
+      max-height: 500px;
+      opacity: 1;
+    }
+  }
+
+  &__answer {
+
+  }
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+
+}
+
+/* =================================
+
+ ================================= */
+
+.aaa {
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+
+}
+
+/* =================================
+
+ ================================= */
+
+.aaa {
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+
+}
+
+/* =================================
+
+ ================================= */
+
+.aaa {
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+
+}

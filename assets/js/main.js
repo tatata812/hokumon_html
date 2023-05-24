@@ -147,6 +147,13 @@ $(function () {
     }
     startPos = winScrollTop;
   });
+
+    //よくあるご質問　アコーディオン
+    $(".page-question__question-wrap").on("click", function () {
+      $(this).next().toggleClass("active");
+      $(this).children('.page-question__arrow').toggleClass("active");
+    });
+
 })
 
 // パララックス
