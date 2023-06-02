@@ -21,6 +21,14 @@
 }
 
 
+// demo 
+
+.demo-img {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+
 /* =================================
 header
  ================================= */
@@ -1358,6 +1366,9 @@ top-link
   &__item-wrap {
     display: flex;
     gap: 12px;
+    justify-content: center;
+    max-width: 1100px;
+    margin: 0 auto;
 
     @include tab {
       flex-wrap: wrap;

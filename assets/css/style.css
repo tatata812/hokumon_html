@@ -1029,6 +1029,11 @@ li {
 /* =================================
 
  ================================= */
+.demo-img {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
 /* =================================
 header
  ================================= */
@@ -2140,6 +2145,9 @@ top-link
 .top-link__item-wrap {
   display: flex;
   gap: 12px;
+  justify-content: center;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 @media (max-width: 820px) {
   .top-link__item-wrap {
